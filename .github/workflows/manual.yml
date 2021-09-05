@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Compiling md files to html'
     steps: 
+      - uses: actions/checkout@v1
       - name: 'Mark-o'
+        uses: actions/setup-node@v1
       - run: npm install -g marked
       - run: echo 'Marked instaled'
